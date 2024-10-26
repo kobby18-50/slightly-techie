@@ -28,6 +28,8 @@ import commentRoute from './routes/commentRoutes.js'
 
 app.use(morgan('tiny'))
 
+app.use(express.static('./public'))
+
 // // security one
 // app.set('trust proxy', 1)
 // app.use(rateLimit({
