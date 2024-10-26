@@ -9,7 +9,6 @@ Kobby Blogs is a backend-only API that enables CRUD operations for blog posts wi
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
-- [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 
 ---
