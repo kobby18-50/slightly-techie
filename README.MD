@@ -10,6 +10,8 @@ Kobby Blogs is a backend-only API that enables CRUD operations for blog posts wi
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
+- [Live Endpount](#live-endpoint)
+- [Account verification](#account-verification)
 
 ---
 
@@ -88,5 +90,30 @@ JWT_LIFETIME=your-jwt-lifetime
 - **PATCH** `/api/v1/comment/blog/:blogId` - Add a comment to a blog post
 - **PATCH** `/api/v1/comment/blog/:blogId/comment/:commentId` - Update a comment
 - **DELETE** `/api/v1/comment/blog/:blogId/comment/:commentId` - Delete a comment
+
+---
+
+### Live Endpoint
+
+The live version of the Kobby Blogs API is available at:
+
+Base URL: [https://slightly-techie-0l2t.onrender.com/]
+
+---
+
+## Account Verification
+
+After registering, a verification email will be sent to the user. Since this is a development environment, Ethereal is used for email testing. Follow these steps to verify an account:
+
+1. **Login to Ethereal**: Go to [Ethereal](https://ethereal.email/login) and log in using the credentials below to access the inbox:
+
+   - **User**: `rosalinda.williamson@ethereal.email`
+   - **Password**: `PrjHGRmKTmwkNtWY86`
+
+2. **Locate the Verification Email**: In the inbox, find the email with the verification link.
+
+3. **Extract the Token**: Copy the verification token included in the email link (usually found in the URL parameters).
+
+4. **Verify the Account**: Use the token to verify the account via the /api/v1/auth/verify-email endpoint, completing the registration process.
 
 ---
