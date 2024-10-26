@@ -31,19 +31,21 @@ app.use(morgan('tiny'))
 app.use(express.static('./public'))
 
 // // security one
-// app.set('trust proxy', 1)
-// app.use(rateLimit({
-//   windowMs : 15 * 60 * 1000,
-//   max : 100
-// }))
+app.set('trust proxy', 1)
+app.use(
+	rateLimit({
+		windowMs: 15 * 60 * 1000,
+		max: 100,
+	})
+)
 
 // express.json
 app.use(express.json())
 
 // security two
-// app.use(helmet())
-// app.use(xss())
-// app.use(cors());
+app.use(helmet())
+app.use(xss())
+app.use(cors())
 
 // routes
 
