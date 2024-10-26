@@ -65,8 +65,6 @@ JWT_SECRET=your-secret-key
 JWT_LIFETIME=your-jwt-lifetime
 ```
 
-Replace `your-database-name`, `your-secret-key`, and `your-jwt-lifetime` with appropriate values.
-
 ---
 
 ## API Endpoints

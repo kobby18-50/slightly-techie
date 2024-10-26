@@ -66,12 +66,13 @@ const updateBlog = async (req, res) => {
 const deleteBlog = async (req, res) => {
 	const { id } = req.params
 
-	const blog = await Blog.findOne({ _id: id })
+	const blog = await Blog.findOne({ _id: id, createdBy: req.user.userId })
 
 	if (!blog) {
 		throw new NotFoundError('Blog not found')
 	}
-	await Blog.deleteOne({ _id: id })
+
+	await blog.deleteOne()
 	res.status(StatusCodes.OK).json({ msg: 'Blog deleted' })
 }
 
