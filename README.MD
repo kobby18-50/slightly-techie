@@ -42,8 +42,8 @@ Kobby Blogs is a backend-only API that enables CRUD operations for blog posts wi
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/your-project-name.git
-   cd your-project-name
+   git clone https://github.com/kobby18-50/slightly-techie.git
+   cd slightly-techie
    ```
 
 2. **Install dependencies**:
